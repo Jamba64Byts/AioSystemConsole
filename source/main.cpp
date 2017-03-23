@@ -43,7 +43,7 @@ if (Cfile::mStr(tm) == true)
 INT64 NUM1;
 
 NUM1 = Cfile::read("SR_Dyas",NULL,"AioSystem.ini");
-cout<<NUM1<<endl;
+cout<<"Valor retorno"<<NUM1<<endl;
 
 
 system("pause");

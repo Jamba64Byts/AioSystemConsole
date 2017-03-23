@@ -87,8 +87,6 @@ strcat_s(v,vFILE);
 err = fopen_s(&file,v,"r");
 
 // (err) retorna 0 quando tem o arquivo e 2 quado nao tem
-
-
 switch (err){
      case 0:
 	 cout<<"Teste para ver se esta aqui 0"<<endl;
@@ -129,13 +127,9 @@ INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
 
    int contador = 0;//Contador de linhas
    char *filter;
-   while(fgets(c,charT,Enter)!= NULL){// Fixed loop infinity
+   while(fgets(c,charT,Enter) != NULL){// Fixed loop infinity
 
    ++contador;
-
-   if(*c != ';' && *c != '#')// IF 01
-   { 
-
    if( strcmp(c,nameKey) == 0) // IF 02 Compara as string return 0 if true
    {
 	   
@@ -179,20 +173,13 @@ INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
 
 	}					   					          
 			   
-	}
+	}else return false;
 
     } // END  IF 02
     else
 	{           
         cout<<"Diferente"<<endl;
         cout<<"Fila "<<contador<<" Name " <<c<<endl;					    
-	}
-	
-	} //IF 01
-	
-    else
-	{
-		continue;
 	}
 			    
 	Sleep(1000);
