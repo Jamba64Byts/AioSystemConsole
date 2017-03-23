@@ -199,4 +199,5 @@ INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
 	 cout<<"Nao existe arquivo"<<endl;
 	 return nTrue = false;
    }
+ return num;
 }
