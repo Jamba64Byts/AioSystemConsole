@@ -107,7 +107,7 @@ switch (err){
 }
 
 
-INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
+INT64 Cfile::read(const char* nameKey, const char* nameFile)
 {
    bool nTrue = true;
    if(CCreateFile("AioSystem.ini") == nTrue){

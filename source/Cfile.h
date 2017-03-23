@@ -46,7 +46,7 @@ temp *t;
 static bool getStr(const char* ,string , const char*);
 static bool mStr(const char*);
 static bool CCreateFile(const char*);
-static INT64 read(const char*, const char*,const char*);
+static INT64 read(const char*,const char*);
 protected:
 static INT64 num;// armazena os numeros separados
 

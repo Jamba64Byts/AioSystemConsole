@@ -30,30 +30,26 @@ void Ctime::sum()
   nTime = nSum;
 }
 
+INT64 extern NUM1;
 void Ctime::getTime()
 {   
-	int nVar;
-	cout<<"Digite numero de dias"<<endl;
-	cin>>nVar;
+	start:
+//	int nVar;
+//	cout<<"Digite numero de dias"<<endl;
+//	cin>>nVar;
 
-	try
-    {
-     if(nVar <=0 || nVar> 60)
+     if(NUM1 <=0 || NUM1> 60)
 	 {
-	   throw nVar;
+		 goto start;
 	 }
-	 else
-	 {
-		 nSum = nVar;
+	 else 
+	 {   
+		 cout<<"Numero de dias chegou aqui no getTime"<<NUM1<<endl;
+		 nSum = (int) NUM1;
 	 }
- }
-
-	catch(unsigned int init)
-	{
-		cout<<"Error ao passar um valor"<<endl;
-	}
 
 }
+
 
 int Ctime::setTime()
 {

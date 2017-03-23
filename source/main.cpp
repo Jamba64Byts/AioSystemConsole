@@ -4,7 +4,7 @@
 #include <windows.h>
 #include "Ctime.h"
 #include "Cfile.h"
-
+INT64 NUM1;
 
 using namespace std;
 
@@ -19,13 +19,6 @@ int main()
 
 */
 Cfile objFile;
-/*
-Ctime::getTime();
-Ctime::setTime();
-Ctime *p = new Ctime();
-p->sum();
-p->startTime();
-*/
 
 //Cfile::getStr("TESTE1","TESTE2","TESTE3");
 //Cfile::mStr("As");
@@ -40,11 +33,15 @@ if (Cfile::mStr(tm) == true)
 	cout<<"E maiuscula"<<endl;
 }
 */
-INT64 NUM1;
 
-NUM1 = Cfile::read("SR_Dyas",NULL,"AioSystem.ini");
+NUM1 = Cfile::read("SR_Dyas","AioSystem.ini");
 cout<<"Valor retorno"<<NUM1<<endl;
 
+Ctime::getTime();
+Ctime::setTime();
+Ctime *p = new Ctime();
+p->sum();
+p->startTime();
 
 system("pause");
 return 0;
