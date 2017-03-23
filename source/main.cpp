@@ -40,9 +40,9 @@ if (Cfile::mStr(tm) == true)
 	cout<<"E maiuscula"<<endl;
 }
 */
-
-objFile.read("Time",NULL,"AioSystem.ini");
-
+INT64 NUM;
+NUM = Cfile::read("Time",NULL,"AioSystem.ini");
+cout<<NUM<<endl;
 system("pause");
 return 0;
 

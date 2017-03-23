@@ -82,7 +82,7 @@ if(nMax<newTM &&  newTM> nMax)
 
 else if(nMax> newTM && newTM <nMax ){
 
-strcpy_s(v,"../config/");
+strcpy_s(v,"../IniConfig/");
 strcat_s(v,vFILE);
 err = fopen_s(&file,v,"r");
 
@@ -116,7 +116,7 @@ INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
    char v[50];
    FILE *Enter;
    errno_t err;
-   strcpy_s(v,"../config/");
+   strcpy_s(v,"../IniConfig/");
    strcat_s(v,nameFile);
    err = fopen_s (&Enter,v,"r");
 
@@ -199,5 +199,5 @@ INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
 	 cout<<"Nao existe arquivo"<<endl;
 	 return nTrue = false;
    }
- return num;
+   return false;
 }
