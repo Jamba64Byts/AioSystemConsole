@@ -1,21 +1,11 @@
 #pragma once
-#include <windows.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <fstream>
-#include <iostream>
-#include <vector>
-#include <string.h>
-#include <locale>
-#include <sstream>//library stringstream name;
+#include "CHeader.h"
+
 
 #define tmChar 1000
 #define nMax 50
 
 using namespace std;
-
-namespace namestemplate
-{
 
    template <class RETURN_INT>
    RETURN_INT covSTRINT(const std::string& nS)
@@ -26,12 +16,11 @@ namespace namestemplate
 	   Ls>>num;//Inserindo a string
 	   return num;
    }struct temp;
-}
+
 
 //Syntax for use namespace 
 //using namespace templat or templat::covSTRINT
 //convSTRINT<int>("STRING");
-using namespace namestemplate;
 
 
 class Cfile{

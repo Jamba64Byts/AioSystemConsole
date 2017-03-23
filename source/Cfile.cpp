@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+#include "CHeader.h"
 #include "Cfile.h"
 
 using namespace std;
@@ -73,7 +73,7 @@ FILE *file;
 int err;
 char v[50];
 bool result;
-int newTM = strlen(vFILE);
+size_t newTM = strlen(vFILE);
 if(nMax<newTM &&  newTM> nMax)
 {
   cout<<"Ecedeu o limite de digitos finalizou o programa"<<endl;

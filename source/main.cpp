@@ -1,5 +1,5 @@
 // teste.cpp : Defines the entry point for the console application.
-#include "stdafx.h"
+#include "CHeader.h"
 #include <iostream>
 #include <windows.h>
 #include "Ctime.h"

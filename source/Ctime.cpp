@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+#include "CHeader.h"
 #include "Ctime.h"
 
 

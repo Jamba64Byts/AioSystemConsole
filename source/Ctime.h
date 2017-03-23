@@ -1,6 +1,6 @@
 #pragma once
-#include <iostream>
-#include <windows.h>
+#include "CHeader.h"
+
 using namespace std;
 
 class Ctime{
