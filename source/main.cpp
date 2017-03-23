@@ -40,10 +40,12 @@ if (Cfile::mStr(tm) == true)
 	cout<<"E maiuscula"<<endl;
 }
 */
-INT64 NUM;
-NUM = Cfile::read("Time",NULL,"AioSystem.ini");
-cout<<NUM<<endl;
+INT64 NUM1;
+
+NUM1 = Cfile::read("SR_Dyas",NULL,"AioSystem.ini");
+cout<<NUM1<<endl;
+
+
 system("pause");
 return 0;
-
 }

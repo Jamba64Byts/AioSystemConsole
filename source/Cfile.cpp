@@ -129,29 +129,23 @@ INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
 
    int contador = 0;//Contador de linhas
    char *filter;
-   while(Enter){
-   ++contador;
-   fgets(c,charT,Enter); //Adiciona mais de um caracter em vez do fget
- 
-   if( strcmp(c,nameKey) != 0) // Compara as string
-   {
-        cout<<"Diferente"<<endl;
-        cout<<"Fila "<<contador<<" Name " <<c<<endl;
-    }
-    else if(strcmp(c,nameKey) == 0)
-	{           
-         cout<<"E igual"<<endl;
-    if(contador == contador)
-	 { //inicio
-	     cout<<"Linha que estamos = "<<contador<<endl;
+   while(fgets(c,charT,Enter)!= NULL){// Fixed loop infinity
 
-         fgets(nArrys,tmChar,Enter);// Ler aqui como a proxima linha pelo que entendi
-		 size_t tm = strlen(nArrys);
+   ++contador;
+
+   if( strcmp(c,nameKey) == 0) // Compara as string
+   {
+	   
+    cout<<"E igual"<<endl;
+    if(contador == contador){ //inicio
+
+     fgets(nArrys,tmChar,Enter);// Ler aqui como a proxima linha pelo que entendi
+	 size_t tm = strlen(nArrys);
 		  	            
      for(unsigned int i=0;i<tm;i++)
 	{
 					   	  
-	Sleep(1500);//Diminuindo o dalay
+//	Sleep(1500);//Diminuindo o dalay
 	if(isdigit(nArrys[i]) != EOF)
 	{   
 	if(nArrys[i] != '=' && nArrys[i] != 0 )
@@ -184,10 +178,15 @@ INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
 	}					   					          
 			   
 	}//Fim
-					    
+
+    }
+    else
+	{           
+        cout<<"Diferente"<<endl;
+        cout<<"Fila "<<contador<<" Name " <<c<<endl;					    
 	}
 			    
-	Sleep(1000);
+//	Sleep(1000);
 		
 	}
     

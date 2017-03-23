@@ -41,6 +41,7 @@ public:
 
 Cfile();
 
+
 temp *t;
 static bool getStr(const char* ,string , const char*);
 static bool mStr(const char*);
