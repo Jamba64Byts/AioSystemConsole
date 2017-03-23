@@ -55,9 +55,9 @@ Cfile();
 temp *t;
 static bool getStr(const char* ,string , const char*);
 static bool mStr(const char*);
-bool CCreateFile(const char*);
-INT64 read(const char*, const char*,const char*);
+static bool CCreateFile(const char*);
+static INT64 read(const char*, const char*,const char*);
 protected:
-INT64 num;// armazena os numeros separados
+static INT64 num;// armazena os numeros separados
 
 };

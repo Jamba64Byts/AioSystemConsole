@@ -5,7 +5,7 @@ using namespace std;
 //Initialize variable statics
 char Cfile::n[16];
 char Cfile::sM;
-
+INT64 Cfile::num;
 Cfile::Cfile()
 {
 
@@ -161,8 +161,8 @@ INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
 	if(isdigit(*filter))
 	{
 	    ss<<filter;
-		ss>>this->num;
-		cout<<nameKey<<" Valor de num = "<<this->num<<endl;//Exibindo valor antes de retorna
+		ss>>num;
+		cout<<nameKey<<" Valor de num = "<<num<<endl;//Exibindo valor antes de retorna
 		return num;
     }
 	else
