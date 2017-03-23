@@ -133,25 +133,27 @@ INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
 
    ++contador;
 
-   if( strcmp(c,nameKey) == 0) // Compara as string
+   if(*c != ';' && *c != '#')// IF 01
+   { 
+
+   if( strcmp(c,nameKey) == 0) // IF 02 Compara as string return 0 if true
    {
 	   
     cout<<"E igual"<<endl;
-    if(contador == contador){ //inicio
+    if(contador == contador){ //Se igual contador Entra nessa condicao
 
-     fgets(nArrys,tmChar,Enter);// Ler aqui como a proxima linha pelo que entendi
-	 size_t tm = strlen(nArrys);
+    fgets(nArrys,tmChar,Enter);// Ler a linha onde contador parou
+	size_t tm = strlen(nArrys);
 		  	            
-     for(unsigned int i=0;i<tm;i++)
-	{
+    for(unsigned int i=0;i<tm;i++){
 					   	  
-//	Sleep(1500);//Diminuindo o dalay
+	Sleep(1500);//Diminuindo o dalay
 	if(isdigit(nArrys[i]) != EOF)
 	{   
 	if(nArrys[i] != '=' && nArrys[i] != 0 )
 	{
 							    
-	filter = &nArrys[i]; // Acendida
+	filter = &nArrys[i]; //Filtrando array
 	if(isdigit(*filter))
 	{
 	    ss<<filter;
@@ -177,16 +179,23 @@ INT64 Cfile::read(const char* nameKey, const char* title, const char* nameFile)
 
 	}					   					          
 			   
-	}//Fim
+	}
 
-    }
+    } // END  IF 02
     else
 	{           
         cout<<"Diferente"<<endl;
         cout<<"Fila "<<contador<<" Name " <<c<<endl;					    
 	}
+	
+	} //IF 01
+	
+    else
+	{
+		continue;
+	}
 			    
-//	Sleep(1000);
+	Sleep(1000);
 		
 	}
     
